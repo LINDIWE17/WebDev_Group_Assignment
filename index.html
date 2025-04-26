@@ -5,10 +5,88 @@
   <title>John Watson - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+ <h1><img src="image300.svg" alt="Logo" width="30" height="30"> UI PORTFOLIO</h1>
+    
+    <div align="right" style="position: absolute; top: 10px; right: 10px;">
+        <button onclick="toggleDropdownTheme()">Toggle Dropdown Dark Mode</button> 
+        <label for="main-dropdown">Select an Option:</label>
+    <select id="main-dropdown" onchange="toggleSubDropdown()">
+        <option value="">-- Choose --</option>
+        <option value="home">Home</option>
+        <option value="about">About</option>
+        <option value="services">Services</option>
+        <option value="pages">Pages</option>
+        <option value="contact">Contact</option>
+        <option value="hire-me">Hire Me</option>
+    </select>
 
+    <!-- Nested Dropdown (Appears when "Pages" is selected) -->
+    <label for="sub-dropdown" id="sub-label" style="display: none;">Select a Page:</label>
+    <select id="sub-dropdown" style="display: none;">
+        <option value="blog">Blog Page</option>
+        <option value="element">Element</option>
+        <option value="404">404 Page</option>
+        <option value="landing">Landing Page</option>
+    </select>
+    </div>
 
+    <h3>Hi, I'm John Watson</h3>
+    <h1><span id="animated-text"></span></h1>
+    <p>I love Graphic design and Photography and have been working on my portfolio since 2016. I Can give your business a new Creative start right away!</p>
+    <table>
+        <tr>
+            <td><button>Hire Me</button></td>
+            <td><button>My Portfolio</button></td>
+        </tr>
+    </table>
+    <div align="left">
+        <img src="images/image.jpg" alt="Image of myself" width="300" height="300">
+    </div>
+        <img src="images/image200.jpg" alt="Image of myself" width="300" height="300"> 
+    <p>MY BIOGRAPHY</p>
+    <h1>
+        <p> A Lead UI Designer & Wed</p>
+        <p>Developer Based In UK</p>
+    </h1>
+    <p>I love Graphic design and Photography and have been</p>
+    <p>working on my portfolio since 2016. I Can give your business</p>
+    <p>a new Creative start right away! Contact me and we will</p>
+    <p>discuss your projects!</p>
+    <p><b>Name:</b> John Watson &nbsp;&nbsp;&nbsp; <b>From:</b> London UK</p> 
+    <p><b>Email:</b> example@mail.com &nbsp;&nbsp;&nbsp; <b>Phone:</b> +21 234 567 8901</p> 
+     <p><b>Follow me on:&nbsp;&nbsp;&nbsp;</b>
+        <img src="behance.jpg" alt="Behance" width="30" height="30">
+        <img src="linkedin.jpg" alt="LinkedIn" width="30" height="30">
+        <img src="facebook.jpg" alt="Facebook" width="30" height="30">
+        <img src="twitter.jpg" alt="Twitter" width="30" height="30">
+     </p>
+     <table>
+        <tr>
+            <td><button>Hire Me</button></td>
+            <td><button>Download CV</button></td>
+        </tr>
+    </table>
+
+<div align="Center">
+    <h2>What I Do For You</h2>
+</div>
+
+<img src="laptop.svg" alt="Laptop" width="50" height="50">
+<h3>Web Development</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit</p>
+<p>accusa ntium dolor emque laudan.</p>
+<img src="app-store.svg" alt="App Store Icon" width="50" height="50">
+<h3>App development</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit</p>
+<p>accusa ntium dolor emque laudan.</p>
+<img src="camera.svg" alt="Camera" width="50" height="50">
+<h3>Photography</h3>
+<p>Sed ut perspiciatis unde omnis iste natus error sit</p>
+<p>accusa ntium dolor emque laudan.</p>
 
 
   <!-- Skills Section -->
@@ -268,6 +346,6 @@
     </div>
 </footer>
 
-
+<script src="script.js"></script>
 </body>
 </html>

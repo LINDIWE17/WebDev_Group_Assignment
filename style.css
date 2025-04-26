@@ -1,7 +1,5 @@
-/* this is for visibility the CSS should cahnge to the atual background color. */
-body{
-    background-color: orangered; 
+
+.dark-mode {
+    background-color: black;
+    color: white;
 }
-
-
-
