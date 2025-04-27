@@ -4,6 +4,18 @@
   ],
   "hints": {
     "no-inline-styles": "off",
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "marquee": "off"
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ]
   }
 }

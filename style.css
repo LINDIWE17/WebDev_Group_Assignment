@@ -305,5 +305,19 @@ body {
     }
 }
 
+.partners-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
->>>>>>> b6e09d00726338777e93ca0e8d1d4f57fc0bb28d
+.partner-logo {
+    animation: moveLeft 8s linear infinite; /* Each cycle lasts 8 seconds */
+}
+
+@keyframes moveLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50px); }
+    100% { transform: translateX(-100px); }
+}
