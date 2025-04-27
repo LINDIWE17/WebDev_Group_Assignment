@@ -54,4 +54,29 @@ function eraseWord() {
 
 typeWord();
 
+function countUp(elementId, targetNumber, duration) {
+    let start = 0;
+    let increment = targetNumber / (duration / 10);
+    let counter = setInterval(() => {
+        start += increment;
+        document.getElementById(elementId).textContent = Math.round(start);
+        if (start >= targetNumber) {
+            document.getElementById(elementId).textContent = targetNumber;
+            clearInterval(counter);
+        }
+    }, 10);
+}
 
+// Observe when stats section is visible
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            countUp("finished-projects", 1500, 2000);
+            countUp("working-hours", 2500, 2000);
+            countUp("online-support", 1280, 2000);
+            countUp("happy-customers", 3020, 2000);
+        }
+    });
+}, { threshold: 0.5 }); // Triggers when 50% of the section is visible
+
+observer.observe(document.querySelector(".stats-section"));
