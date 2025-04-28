@@ -1,323 +1,753 @@
-<<<<<<< HEAD
-
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-=======
 /* Reset some default browser styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Sets a clean, modern font */
+  background-color: #f4f6f8; /* Sets a slightly lighter background for better readability */
+  color: #333; /* Sets a dark text color for contrast */
+  padding: 20px; /* Adds padding around the body content */
+  line-height: 1.6; /* Improves text readability by increasing line spacing */
+}
+
+/* Header and Navbar */
+header {
+  display: flex; /* Enables flexbox for layout */
+  flex-wrap: wrap; /* Allows elements to wrap onto new lines if needed */
+  background-color: #0d1b2a; /* Sets a dark navy background color */
+  color: #fff; /* Sets text color to white for contrast */
+  padding: 40px 20px; /* Adds padding inside the header */
+  border-radius: 10px; /* Rounds the corners of the header */
+  font-family: "Arial", sans-serif; /* Sets a fallback font */
+  align-items: center; /* Vertically centers items in the header */
+}
+
+/* Main container for Logo, Navbar, and Button */
+.header-content {
+  display: flex; /* Enables flexbox for layout */
+  justify-content: center; /* Centers content horizontally */
+  width: 100%; /* Ensures the container spans the full width */
+  align-items: center; /* Vertically centers items */
+  gap: 40px; /* Adds space between logo, navbar, and button */
+  flex-wrap: wrap; /* Allows elements to wrap onto new lines if needed */
+}
+
+.logo {
+  display: flex; /* Enables flexbox for layout */
+  align-items: center; /* Vertically centers the logo text and image */
+  font-size: 1.5rem; /* Sets font size for the logo text */
+  font-weight: bold; /* Makes the logo text bold */
+}
+
+.logo img {
+  width: 50px; /* Sets the width of the logo image */
+  margin-right: 10px; /* Adds space between the image and text */
+}
+
+.navbar {
+  display: flex; /* Enables flexbox for layout */
+  gap: 20px; /* Adds space between navigation links */
+}
+
+nav ul {
+  display: flex; /* Enables flexbox for layout */
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  gap: 20px; /* Adds space between list items */
+}
+
+nav ul li a {
+  color: #fff; /* Sets link text color to white */
+  text-decoration: none; /* Removes underline from links */
+  font-weight: 600; /* Makes link text bold */
+  font-size: 1.1rem; /* Sets font size for links */
+  transition: color 0.3s ease; /* Adds a smooth transition effect for hover state */
+}
+
+nav ul li a:hover {
+  color: #2ecc71; /* Changes link color to green on hover */
+}
+
+.header-controls {
+  display: flex; /* Enables flexbox for layout */
+  align-items: center; /* Vertically centers items */
+  justify-content: center; /* Centers items horizontally */
+  gap: 20px; /* Adds space between controls */
+}
+
+button {
+  background-color: #2ecc71; /* Sets button background color to green */
+  color: #fff; /* Sets button text color to white */
+  padding: 10px 20px; /* Adds padding inside the button */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounds the corners of the button */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-size: 1rem; /* Sets font size for button text */
+  transition: background-color 0.3s ease; /* Adds a smooth transition effect for hover state */
+}
+
+button:hover {
+  background-color: #27ae60; /* Changes button background color to a darker green on hover */
+}
+
+/* Introduction and Image Section */
+.image-container {
+  flex: 1; /* Allows the image container to take up available space */
+
+  padding: 10px; /* Adds padding around the image */
+  border-radius: 5%; /* Rounds the corners of the image container */
+  overflow: hidden; /* Hides any overflow from the image */
+}
+
+.image-container img {
+  width: 100%; /* Ensures the image fills the container */
+  height: 100%; /* Ensures the image fills the container */
+  border-radius: 5%; /* Rounds the corners of the image */
+  object-fit: cover; /* Ensures the image is not distorted */
+}
+
+section {
+  padding: 20px; /* Adds padding inside the section */
+  max-width: 800px; /* Limits the section width */
+  margin: 20px auto; /* Centers the section horizontally */
+  border-radius: 8px; /* Rounds the corners of the section */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+.intro {
+  display: flex; /* Enables flexbox for layout */
+  align-items: center; /* Vertically centers items */
+  justify-content: space-between; /* Adds space between intro text and image */
+  margin-top: 20px; /* Adds space above the intro section */
+  padding: 20px; /* Adds padding inside the intro section */
+  background-color: #ffffff; /* Sets a white background for the intro section */
+  border-radius: 10px; /* Rounds the corners of the intro section */
+}
+
+.intro-text {
+  flex: 2; /* Allows the text container to take up more space */
+  text-align: left; /* Centers text for smaller screens */
+}
+
+.intro-text h3 {
+  font-size: 1.5rem; /* Sets font size for the subheading */
+  margin-bottom: 10px; /* Adds space below the subheading */
+}
+
+.intro-text h1 {
+  font-size: 2rem; /* Sets font size for the main heading */
+  margin-bottom: 10px; /* Adds space below the main heading */
+}
+
+.intro-text p {
+  font-size: 1.1rem; /* Sets font size for the paragraph */
+  line-height: 1.6; /* Improves readability by increasing line spacing */
+  margin-bottom: 5px; /* Adds space below the paragraph */
+}
+
+/* Action Buttons (Below the Intro Text) */
+.action-buttons {
+  display: flex; /* Enables flexbox for layout */
+  gap: 20px; /* Adds space between buttons */
+  margin-top: 20px; /* Adds space above the buttons */
+}
+
+.action-buttons button {
+  background-color: #2ecc71; /* Sets button background color to green */
+  color: white; /* Sets button text color to white */
+  padding: 15px 30px; /* Adds padding inside the button */
+  border: none; /* Removes default border */
+  border-radius: 5px; /* Rounds the corners of the button */
+  font-size: 1.1rem; /* Sets font size for button text */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Adds a smooth transition effect for hover state */
+}
+
+.action-buttons button:hover {
+  background-color: #27ae60; /* Changes button background color to a darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stacks header elements vertically */
+    padding: 20px; /* Reduces padding for smaller screens */
+  }
+
+  .header-content {
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers content horizontally */
+  }
+
+  .logo,
+  .navbar,
+  .header-controls {
+    justify-content: center; /* Centers items horizontally */
+    width: 100%; /* Ensures items span the full width */
+  }
+
+  .intro,
+  .image-container {
+    flex-direction: column; /* Stacks intro text and image vertically */
+    text-align: center; /* Centers text for smaller screens */
+    margin-top: 20px; /* Adds space above the section */
+  }
+
+  .image-container img {
+    width: 200px; /* Reduces image size for smaller screens */
+    height: auto; /* Reduces image size for smaller screens */
+  }
+
+  .action-buttons {
+    justify-content: center; /* Centers buttons horizontally */
+    width: 100%; /* Ensures buttons span the full width */
+  }
+
+  .action-buttons button {
+    width: 100%; /* Makes buttons full-width */
+    padding: 15px; /* Adjusts padding for smaller screens */
+  }
+}
+
+/* Biography Section */
+/* .biography {
+  
+  background-color: #3498db;
+} */
+
+.biography-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* space between photo and text */
+}
+
+.biography-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px; /* optional: to make the image a bit rounded */
+}
+
+.biography-text {
+  max-width: 600px;
+}
+
+.biography-buttons {
+  margin-top: 20px;
+}
+
+.biography-buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+}
+
+.biography-buttons button:hover {
+  background-color: #3498db; /* Change to a lighter blue on hover */
+}
+
+.follow-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.follow-me a {
+  color: green;
+  text-decoration: none;
+}
+
+.follow-me a:hover {
+  color: darkgreen;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+.social-icons img:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.3); /* greenish shadow */
+}
+
+/* What I Do Section */
+.services {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* good for responsiveness */
+}
+
+.service {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  flex: 1 1 200px; /* flexible width */
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.more-services {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.more-services a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.more-services a:hover {
+  color: darkgreen;
 }
 
 /* --- Skills Section --- */
 .skills-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 60px 10%;
-    background: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #ffffff;
 }
 
 .skills-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .skills-content {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 .skills-label {
-    color: #ff4d5a;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+  color: #ff4d5a;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .skills-heading {
-    font-size: 32px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .skills-description {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .skill-item {
-    margin-bottom: 20px;
+  flex: 0 0 20%; /* Each skill item takes up 20% of the width */
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .skill-name {
-    margin-bottom: 5px;
-    font-weight: 600;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .skill-bar {
-    width: 100%;
-    background: #ddd;
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
+  width: 100%;
+  background: #ddd;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .skill-progress {
-    height: 100%;
-    background: #ff4d5a;
-    width: 0;
-    transition: width 0.8s ease;
+  height: 100%;
+  background: #ff4d5a;
+  width: 0;
+  transition: width 0.8s ease;
 }
 
 /* --- Services Section --- */
 .services-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 60px 10%;
-    background-color: #f0f0f0;
-    gap: 40px;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .services-contents {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* Responsive grid layout */
+  gap: 20px;
 }
 
 .service-item {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+  background: #f9f9f9;
+
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
-.service-icon {
-    font-size: 36px;
-    color: #ff4d5a;
-    margin-bottom: 15px;
+.services-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Make sure the container fills the available space */
+  flex: 1; /* Ensure the image container takes the remaining space */
 }
 
 .services-image img {
-    max-width: 100%;
-    border-radius: 10px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+.service-icon i {
+  font-size: 36px;
+  color: green;
+  margin-bottom: 5px;
+}
+
+/* --- Services Section --- */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Make sure the space between content and image is maximized */
+  align-items: center;
+}
+
+.services-contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the services */
+  gap: 10px;
+  flex: 2; /* Ensure the service content takes up most of the space */
+}
+
+.service-item {
+  background: #f9f9f9;
+  border-radius: 10px;
+  text-align: left; /* Align text to the left */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  padding: 5px;
+  display: flex; /* Align the icon and text horizontally */
+  gap: 5px;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.services-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.service-icon {
+  font-size: 30px;
+  color: green;
+  margin-right: 5px;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically below heading */
+}
+
+.service-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column; /* Stack the services content and image on smaller screens */
+    align-items: center;
+  }
+
+  .services-contents {
+    grid-template-columns: 1fr; /* Stack items in a single column on smaller screens */
+  }
+
+  .services-image img {
+    max-width: 100%; /* Ensure the image scales down on smaller screens */
+  }
 }
 
 /* --- Stats Section --- */
 .stats-section {
-    background: #ff4d5a;
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
+  background: #ff4d5a;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .stats-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
 }
 
 .stat-box h2 {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .stat-box p {
-    margin-top: 10px;
-    font-size: 18px;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 /* --- Portfolio Section --- */
+/* --- Portfolio Section --- */
 .portfolio {
-    padding: 60px 10%;
-    background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .portfolio h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 36px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed three-column layout */
+  gap: 20px;
+  justify-items: center; /* Center the items horizontally */
+  margin-top: 20px;
+}
+
+.portfolio-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure images are contained within the box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px); /* Slightly lifts the image on hover */
 }
 
 .portfolio-item img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.portfolio-item img:hover {
-    transform: scale(1.05);
+/* Optional: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
 }
 
 /* --- Partner Logos Section --- */
 .partners-section {
-    background-color: #f8f8f8;
-    padding: 40px 0;
+  padding: 40px 20px;
+  background-color: #ff4d5a; /* Light green background */
 }
 
 .partners-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Display 4 logos in a row */
+  gap: 20px;
+  justify-items: center; /* Center the logos within the grid */
 }
 
 .partner-logo img {
-    max-height: 60px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.partner-logo:hover img {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .partners-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 logos in a row for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 logos in a row for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-container {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
 }
 
 /* --- Footer Section --- */
 .footer {
-    background: #222;
-    color: #bbb;
-    padding: 40px 10%;
+  background: #222;
+  color: #bbb;
+  padding: 40px 10%;
 }
 
 .footer-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer-logo img {
-    height: 40px;
+  height: 40px;
 }
 
 .footer-contact .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #444;
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social-links {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .social-link {
-    color: #bbb;
-    font-size: 18px;
-    transition: color 0.3s ease;
+  color: #bbb;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .social-link:hover {
-    color: #ff4d5a;
+  color: #ff4d5a;
 }
 
 .scroll-to-top .top-button {
-    color: #ff4d5a;
-    font-size: 24px;
-    text-decoration: none;
+  color: #ff4d5a;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .skills-section, .services-container, .footer-main {
-        flex-direction: column;
-        text-align: center;
-    }
+  .skills-section,
+  .services-container,
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .services-image {
-        margin-top: 20px;
-    }
+  .services-image {
+    margin-top: 20px;
+  }
 }
 /* Add any additional media queries or styles as needed for responsiveness */
 @media (max-width: 480px) {
-    .skills-section, .services-container, .footer-main {
-        padding: 20px;
-    }
+  .skills-section,
+  .services-container,
+  .footer-main {
+    padding: 20px;
+  }
 
-    .skills-heading {
-        font-size: 28px;
-    }
+  .skills-heading {
+    font-size: 28px;
+  }
 
-    .skill-name {
-        font-size: 16px;
-    }
+  .skill-name {
+    font-size: 16px;
+  }
 
-    .service-item {
-        padding: 15px;
-    }
+  .service-item {
+    padding: 15px;
+  }
 
-    .stat-box h2 {
-        font-size: 36px;
-    }
+  .stat-box h2 {
+    font-size: 36px;
+  }
 }
 /* Add any additional styles for smaller screens as needed */
 @media (max-width: 360px) {
-    .skills-heading {
-        font-size: 24px;
-    }
+  .skills-heading {
+    font-size: 24px;
+  }
 
-    .skill-name {
-        font-size: 14px;
-    }
+  .skill-name {
+    font-size: 14px;
+  }
 
-    .service-item {
-        padding: 10px;
-    }
+  .service-item {
+    padding: 10px;
+  }
 
-    .stat-box h2 {
-        font-size: 32px;
-    }
-}
-
-.partners-container {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.partner-logo {
-    animation: moveLeft 8s linear infinite; /* Each cycle lasts 8 seconds */
-}
-
-@keyframes moveLeft {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-50px); }
-    100% { transform: translateX(-100px); }
+  .stat-box h2 {
+    font-size: 32px;
+  }
 }
