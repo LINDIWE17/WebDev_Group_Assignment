@@ -105,7 +105,7 @@ button:hover {
 
 .image-container img {
   width: 100%; /* Ensures the image fills the container */
-  height: 100%; /* Ensures the image fills the container */
+  height: 100%; /* Ensures the image fills container */
   border-radius: 5%; /* Rounds the corners of the image */
   object-fit: cover; /* Ensures the image is not distorted */
 }
