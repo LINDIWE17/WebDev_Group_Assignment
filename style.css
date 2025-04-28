@@ -377,8 +377,8 @@ section {
 }
 
 .skill-item {
-  flex: 0 0 20%; /* Each skill item takes up 20% of the width */
   display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
